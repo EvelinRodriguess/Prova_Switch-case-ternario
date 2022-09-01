@@ -1,0 +1,36 @@
+<script>
+    //USANDO OPERADOR TERNÁRIO USANDO OPERADOR TERNÁRIO USANDO OPERADOR TERNÁRIO
+    
+    //PROBLEMA: Taxa de Juros
+    //Peça para o usuário informar o valor do computador que deseja comprar. Peça também para ele informar a quantidade de parcelas que deseja financiar.
+    //Considere que:
+    //Se a quantidade de parcelas for 1 (apenas uma), deverá ser aplicado um desconto de 5% (5/100).
+    //Se a quantidade de parcelas for até 6 (inclusive), o juro a ser aplicado será de 3% (3/100) sob o valor do computador.
+    //Se a quantidade de parcelas for até 12 (inclusive), o juro a ser aplicado será de 8% sob o valor do computador.
+    //Se a quantidade de parcelas for acima de 12, o juro a ser aplicado será de 12% sob o valor do computador.
+    //Apresente o valor final do computador e o valor de cada parcela.
+
+    //ENTRADA
+const computador = Number(prompt("Informe o valor do computador que deseja comprar:"));
+const parcelas = parseInt(prompt("Informe a quantidade de parcelas que deseja financiar:"));
+
+    //PROCESSAMENTO
+    const valorParcelas = computador / parcelas;
+    const desconto1 = computador - (computador / 0.5);
+    const juro1 = computador + (computador / 0.3);
+    const juro2 = computador + (computador / 0.8);
+    const juro3 = computador + (computador / 0.12);
+    
+ 
+(parcelas === 1) ? document.write(`Valor final: ${desconto1.toFixed(2)}`)
+
+
+: (parcelas <= 6) ? document.write(`Valor final: ${juro1.toFixed(2)} e o valor de cada parcela é ${valorParcelas.toFixed(2)}`)
+
+: (parcelas <= 12) ? document.write(`Valor final: ${juro2.toFixed(2)} e o valor de cada parcela é ${valorParcelas.toFixed(2)}`)
+
+: document.write(`Valor final: ${juro3.toFixed(2)} e o valor de cada parcela é ${valorParcelas.toFixed(2)}`)
+
+    //SAÍDA
+
+</script>
